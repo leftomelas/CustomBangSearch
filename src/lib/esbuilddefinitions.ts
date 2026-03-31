@@ -1,3 +1,6 @@
+/** biome-ignore-all lint/suspicious/noTsIgnore: ts should ignore process being undefined */
+// @ts-nocheck
+
 // Flag for development mode, enables debugging features
 export const inDev = process.env.dev as unknown as boolean;
 

@@ -1,3 +1,5 @@
+/** biome-ignore-all lint/suspicious/noTsIgnore: needed for browser stuff */
+
 import React, { useEffect, useState } from "react";
 import { Title, Box, Group, Text, Stack } from "@mantine/core";
 import browser from "webextension-polyfill";
@@ -9,7 +11,7 @@ import type { allowedStorageMethodsAsType } from "../../lib/config/config";
 
 const BROWSER_QUOTA_BYTES_PER_ITEM =
 	// @ts-ignore: The chrome namespace will be available if this check passes
-	currentBrowser === "chrome" ? chrome.storage.sync.QUOTA_BYTES : 102400;
+		currentBrowser === "chrome" ? chrome.storage.sync.QUOTA_BYTES : 102400;
 
 interface Props {
 	storageMethod: allowedStorageMethodsAsType;

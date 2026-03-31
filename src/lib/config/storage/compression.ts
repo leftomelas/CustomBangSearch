@@ -28,6 +28,7 @@ export function decompressConfigFromString(str: string): config.Config {
 		throw new Error("Failed to decompress string");
 	}
 
+	// biome-ignore lint/complexity/noUselessUndefinedInitialization: explicit undefined for clear reasoning
 	let parsed = undefined;
 	try {
 		parsed = JSON.parse(decompressed);

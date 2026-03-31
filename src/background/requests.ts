@@ -171,7 +171,7 @@ export async function getRedirects(
  */
 export async function processRequest(
 	r: WebRequest.OnBeforeRequestDetailsType,
-	// biome-ignore lint/suspicious/noConfusingVoidType:
+	// biome-ignore lint/suspicious/noConfusingVoidType: void fine here
 ): Promise<void | WebRequest.BlockingResponse> {
 	if (r.type !== "main_frame") {
 		// Any request that's not of type main_frame is very unlikely to be of use
